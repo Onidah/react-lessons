@@ -51,7 +51,7 @@ function ProductList() {
                 <div className='stats'>
                     <div className='stats-card'>
                         <p>Total products</p>
-                        <h2>{products.length}</h2>
+                        <h2>{products}</h2>
                     </div>
                 </div>
             </main>
