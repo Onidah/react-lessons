@@ -6,7 +6,7 @@ function Courses() {
     <div>
         <h1>Courses</h1>
         <button>
-            <Link to='/'>Return to home</Link>
+            <Link to='/contact'>Return to contact</Link>
         </button>
     </div>
   )
