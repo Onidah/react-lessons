@@ -21,7 +21,7 @@ const[photos,setPhotos]=useState([]);
             {photo.title}
             {photo.albumId}
           </div>
-        ))
+        )) 
       }
     </div>
   )
