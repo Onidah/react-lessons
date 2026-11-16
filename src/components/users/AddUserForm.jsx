@@ -39,7 +39,7 @@ function AddUserForm() {
           <Button 
           text="Add new user" 
           color="red"
-          onClick={}/>
+          />
       </div>
     </div>
   );
