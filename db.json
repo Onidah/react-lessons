@@ -1,15 +1,10 @@
 {
-    "users":[
-        {
-            "id":"1",
-            "name":"onida",
-            "email":"onidahaxhaj@gmail.com"
-        },
-
-         {
-            "id":"2",
-            "name":"onida2",
-            "email":"onidahaxhaj2@gmail.com"
-        }
-    ]
+  "users": [
+    {
+      "name": "onida",
+      "email": "onidahaxhaj@gmail.com",
+      "id": "mgCBgF0WoKE"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
 }

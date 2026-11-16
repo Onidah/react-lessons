@@ -1,9 +1,21 @@
-import React from 'react'
+import React from "react";
+import Button from "../common/Button";
 
-function UserCard() {
+function UserCard({ user, onEdit, onDelete }) {
   return (
-    <div>UserCard</div>
-  )
+    <div className="user-card">
+      <div>
+        <h3>{user.name}</h3>
+        <p>{user.email}</p>
+      </div>
+
+      <div>
+        <Button text="Edit" color="blue" onClick={() => onEdit(user)} />
+
+        <Button text="Delete" color="red" onClick={() => onEdit(user.id)} />
+      </div>
+    </div>
+  );
 }
 
-export default UserCard
+export default UserCard;

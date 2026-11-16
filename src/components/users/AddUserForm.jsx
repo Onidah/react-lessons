@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Input from "../common/Input";
 import Button from "../common/Button";
 
-function AddUserForm() {
+function AddUserForm({getUsers}) {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
 
@@ -15,11 +15,14 @@ function AddUserForm() {
       body: JSON.stringify({ name, email }),
     })
       .then((response) => response.json())
-      .then(() => {
-        getUsers();
-        setEmail();
-      });
+     .then(() => {
+        getUsers();      
+        setName("");     
+        setEmail("");
+      })
   };
+
+  
 
   return (
     <div>
@@ -33,12 +36,13 @@ function AddUserForm() {
 
 
         <Input  onChange={(e)=>setEmail(e.target.value)}
-          placeholder="first name"
+          placeholder="Email"
           value={email}/>
 
           <Button 
           text="Add new user" 
           color="red"
+          onClick={addUser}
           />
       </div>
     </div>
