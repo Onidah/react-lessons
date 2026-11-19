@@ -1,20 +1,16 @@
 import React from "react";
-import UserCard from "./UserCard";
+import Button from "../common/Button";
 
-function UserList({ users, onEdit, onDelete }) {
-  return <div>
-    <h3>Users length({users.length})</h3>
-    {
-      users.map((user)=>(
-        <UserCard
-        key={user.id}
-        user={user}
-        onEdit={onEdit}
-        onDelete={onDelete}
-        />
-      ))
-    }
-  </div>;
+function UserCard({ user, onEdit, onDelete }) {
+  return (
+    <div>
+      <p>{user.name}</p>
+      <p>{user.email}</p>
+
+      <Button text="Edit" color="blue" onClick={() => onEdit(user)} />
+      <Button text="Delete" color="red" onClick={() => onDelete(user.id)} />
+    </div>
+  );
 }
 
-export default UserList;
+export default UserCard;

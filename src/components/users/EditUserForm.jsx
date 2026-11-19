@@ -1,8 +1,11 @@
 import React, { useState } from "react";
+import Button from "../common/Button";
+import Input from "../common/Input";
 
 function EditUserForm({ user, onUpdate, onCancel }) {
   const [name, setName] = useState(user.name);
   const [email, setEmail] = useState(user.email);
+
   return (
     <div>
       <div>
@@ -20,7 +23,11 @@ function EditUserForm({ user, onUpdate, onCancel }) {
             value={email}
           />
 
-          <Button text="Update" color="blue" onClick={onUpdate} />
+          <Button
+            text="Update"
+            color="blue"
+            onClick={() => onUpdate(name, email)}
+          />
           <Button text="Cancel" color="orange" onClick={onCancel} />
         </div>
       </div>

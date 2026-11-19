@@ -12,7 +12,14 @@ function UserCard({ user, onEdit, onDelete }) {
       <div>
         <Button text="Edit" color="blue" onClick={() => onEdit(user)} />
 
-        <Button text="Delete" color="red" onClick={() => onEdit(user.id)} />
+        <Button
+          text="Delete"
+          color="red"
+          onClick={() => {
+            console.log("delete clicked", user.id);
+            onDelete(user.id);
+          }}
+        />
       </div>
     </div>
   );
